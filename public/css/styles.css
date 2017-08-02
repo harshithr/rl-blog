@@ -1,0 +1,64 @@
+#newBlogSubmit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#newBlogSubmitButton {
+    width: 25%;
+}
+
+#navbarFloatingButton {
+    margin-top: 2.5%;
+    position: relative;
+}
+
+#newBlogReturnButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#showEditButton {
+    height: 3%;
+}
+
+#showDeleteButton {
+    margin-left: 90%;
+    position: relative;
+    top: -50px;
+}
+
+#showDeleteIcon {
+    background-color: transparent;
+    border: 0;
+}
+
+#indexCardImage {
+    width: 50%;
+}
+
+#indexContainer {
+    margin-top: 7%;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+}
+
+#showContainer{
+    margin-top: 7%;
+}
+
+#newBlogHeader {
+    margin-top: 10%;
+}
+
+#editHeader {
+    margin-top: 10%;
+}
+
+
+
+

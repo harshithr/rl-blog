@@ -1,0 +1,42 @@
+<% include partials/header %>
+
+<h1 id="newBlogHeader" class="center">ADD A NEW POST TO BLOG</h1>
+
+<div class="row">
+    <form class="col s12" action="/blogs" method="POST">
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="newTitle" type="text" class="validate">
+                <label for="title">TITLE</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="newImage" type="text" class="validate">
+                <label for="image">IMAGE URL</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                    <div class="input-field col s12">
+                        <textarea name="newBody" class="materialize-textarea validate" ></textarea>
+                        <label for="body">DESCRIPTION</label>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="newBlogSubmit" class="col s12">
+            <button id="newBlogSubmitButton" class="btn waves-effect waves-light btn-large" type="submit" name="action">SUBMIT
+                <i class="material-icons right">send</i>
+            </button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="newBlogReturnButton" class="col s12">
+                <a href="/blogs" id="newBlogReturnText" class="waves-effect waves-teal btn-flat">go back</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<% include partials/footer %>

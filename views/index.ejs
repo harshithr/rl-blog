@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+<% blogsData.forEach(function(data){ %>
+
+<div class="container" id="indexContainer">
+    <div class="col s12 m7">
+        <hr>
+        <a href="/blogs/<%= data._id %>"><h2 class="header black-text"><%= data.title %></h2></a>
+        <div class="card horizontal">
+            <div id="indexCardImage" class="card-image">
+                <a href="/blogs/<%= data._id %>"><img src="<%= data.image %>"></a>
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <span><%= data.createdAt.toDateString() %></span>
+                    <p><%- data.body.substring(0, 100) %>...</p>
+                </div>
+                <div class="card-action">
+                    <a href="/blogs/<%= data._id %>">More Info...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% }); %>
+
+
+<% include partials/footer %>

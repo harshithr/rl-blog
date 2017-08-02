@@ -1,0 +1,42 @@
+<% include partials/header %>
+
+<h1 class="center" id="editHeader">Edit <%= blogData.title %></h1>
+
+<div class="row">
+    <form class="col s12" action="/blogs/<%= blogData._id %>?_method=PUT" method="POST">
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="editTitle" type="text" value="<%= blogData.title %>" class="validate">
+                <label for="title">TITLE</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="editImage" type="text" value="<%= blogData.image %>" class="validate">
+                <label for="image">IMAGE URL</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="editBody" class="materialize-textarea validate"  ><%- blogData.body %></textarea>
+                    <label for="body">DESCRIPTION</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="newBlogSubmit" class="col s12">
+                <button id="newBlogSubmitButton" class="btn waves-effect waves-light btn-large" type="submit" name="action">SUBMIT
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="newBlogReturnButton" class="col s12">
+                <a href="/blogs/<%= blogData._id %>" id="newBlogReturnText" class="waves-effect waves-teal btn-flat">go back</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<% include partials/footer %>
